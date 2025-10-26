@@ -176,33 +176,3 @@ if __name__ == "__main__":
     asyncio.run(main())
 ```
 
----
-
-## Tips
-
-1. **CSS Selectors**: Use standard CSS selectors to target elements
-   - `#id` for ID selector
-   - `.class` for class selector
-   - `tag` for tag selector
-   - `tag.class#id` for combination
-
-2. **Timeouts**: Set appropriate timeouts for each wait action
-   - Default timeout is 15000ms
-   - Increase timeout for slow-loading pages
-
-3. **Error Handling**: The TaskExecutor automatically handles errors
-   - Each step's result is recorded
-   - Failed steps don't stop the entire task
-   - Check the `success` field in results
-
-4. **Browser Control**: The browser runs in headless mode by default
-   - Can be changed in `config.py`
-   - Set `BROWSER_HEADLESS=false` in `.env`
-
----
-
-## Next Steps
-
-- Check out `examples/simple_task.py` for more examples
-- See `README.md` for complete project documentation
-- Explore `api/main.py` for API-based automation
