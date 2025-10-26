@@ -212,36 +212,4 @@ pytest tests/test_core.py
 pytest tests/test_ai_brain.py
 ```
 
-## Deployment
 
-### Docker
-
-```dockerfile
-FROM python:3.9-slim
-
-WORKDIR /app
-COPY requirements.txt .
-RUN pip install -r requirements.txt
-RUN playwright install chromium
-
-COPY . .
-EXPOSE 8000
-
-CMD ["python", "api/main.py"]
-```
-
-### Environment Variables
-
-Configure `OPENAI_API_KEY` for AI features.
-
-## Contributing
-
-1. Fork the repository
-2. Create your feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a Pull Request
-
-## License
-
-MIT License
